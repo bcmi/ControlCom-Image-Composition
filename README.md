@@ -44,4 +44,6 @@ We show our results using four types of indicators.
 
 ## Other Resources
 
-- [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
++ We summarize the papers and codes of image composition from all aspects: [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
++ We summarize all possible evaluation metrics to evaluate the quality of composite images:  [Composite-Image-Evaluation](https://github.com/bcmi/Composite-Image-Evaluation)
++ We write a comprehensive on image composition: [the 3rd edition](https://arxiv.org/abs/2106.14490)
