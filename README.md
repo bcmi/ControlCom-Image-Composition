@@ -37,6 +37,8 @@ Our method is built upon stable diffusion and the network architecture is shown 
 
 Coming soon!
 
+**Part of our ControlCom has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try!** 
+
 ## Experiments
 
 We show our results using four types of indicators. 
