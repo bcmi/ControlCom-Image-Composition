@@ -30,9 +30,68 @@ Our method is built upon stable diffusion and the network architecture is shown 
   <img src='./figures/architecture.png'  width=90% />
 </p>
 
-## Code and Model
+## Code and model
 
-Coming soon!
+### 1.  Dependencies
+
+  - Python == 3.8.5
+  - Pytorch == 1.10.1
+  - Pytorch-lightning == 1.9.0
+  - Run
+
+    ```bash
+    cd ControlCom-Image-Composition
+    pip install -r requirements.txt
+    cd src/taming-transformers
+    python setup.py install
+    ```
+### 2.  Download Models
+
+  - Please download the following files to the ``checkpoints`` folder to create the following file tree:
+    ```bash
+    checkpoints/
+    ├── ControlCom_blend_harm.pth
+    ├── ControlCom_view_comp.pth
+    └── openai-clip-vit-large-patch14
+        ├── config.json
+        ├── merges.txt
+        ├── preprocessor_config.json
+        ├── pytorch_model.bin
+        ├── tokenizer_config.json
+        ├── tokenizer.json
+        └── vocab.json
+    ```
+  - **openai-clip-vit-large-patch14 ([Huggingface](https://huggingface.co/BCMIZB/Libcom_pretrained_models/blob/main/openai-clip-vit-large-patch14.zip) | [ModelScope](https://www.modelscope.cn/models/bcmizb/Libcom_pretrained_models/file/view/master/openai-clip-vit-large-patch14.zip))**: The foreground encoder of our ControlCom is built on pretrained clip.
+
+  - **ControlCom_blend_harm.pth ([Huggingface](https://huggingface.co/BCMIZB/Libcom_pretrained_models/blob/main/ControlCom_blend_harm.pth) | [ModelScope](https://modelscope.cn/models/bcmizb/Libcom_pretrained_models/file/view/master/ControlCom_blend_harm.pth))**: This model is finetuned for 20 epochs specifically for the tasks of image blending and harmonization. Therefore, when the ``task`` argument is set to "blending" or "harmonization" in the following test code, this checkpoint will be loaded.
+  
+  - **ControlCom_view_comp.pth ([Huggingface](https://huggingface.co/BCMIZB/Libcom_pretrained_models/blob/main/ControlCom_view_comp.pth) | [ModelScope](https://modelscope.cn/models/bcmizb/Libcom_pretrained_models/file/view/master/ControlCom_view_comp.pth))**: This model is enhanced on viewpoint transformation through finetuning for several epochs using additional multi-viewpoint datasets, *i.e.*, [MVImgNet](https://gaplab.cuhk.edu.cn/projects/MVImgNet/). When the ``task`` argument is set to "viewsynthesis" or "composition" in the following test code, this checkpoint will be loaded.
+
+
+### 3. Inference on examples
+
+  - To perform image composition using our model, you can use `scripts/inference.py`. For example,
+
+    ```
+    python scripts/inference.py \
+    --task harmonization \
+    --outdir results \
+    --testdir examples \
+    --num_samples 1 \
+    --sample_steps 50 \
+    --gpu 0
+    ```
+    or simply run:
+    ```
+    sh test.sh
+    ```
+
+### 4. Inference on your own data
+
+- Please refer to the [examples](./examples/) folder for data preparation:
+  - keep the same filenames for each pair of data. 
+  - either the ``mask_bbox`` folder or the ``bbox`` folder is sufficient. 
+  - ``foreground_mask`` folder is optional but recommended for better composite results.
 
 **Part of our ControlCom has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try!** 
 
@@ -43,6 +102,20 @@ We show our results using four types of indicators.
 <p align='center'>  
   <img src='./figures/controllable_results.jpg'  width=60% />
 </p>
+
+## **Acknowledgements**
+This code borrows heavily from [Paint-By-Example](https://github.com/Fantasy-Studio/Paint-by-Example). We also appreciate the contributions of [Stable Diffusion](https://github.com/CompVis/stable-diffusion).
+
+## Citation
+If you find this work or code is helpful in your research, please cite:
+````
+@article{zhang2023controlcom,
+  title={Controlcom: Controllable image composition using diffusion model},
+  author={Zhang, Bo and Duan, Yuxuan and Lan, Jun and Hong, Yan and Zhu, Huijia and Wang, Weiqiang and Niu, Li},
+  journal={arXiv preprint arXiv:2308.10040},
+  year={2023}
+}
+````
 
 ## Other Resources
 

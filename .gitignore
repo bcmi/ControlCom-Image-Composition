@@ -1,0 +1,2 @@
+checkpoints/*.pth
+checkpoints/openai-clip-vit-large-patch14/pytorch_model.bin
