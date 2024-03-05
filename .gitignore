@@ -1,4 +1,3 @@
-checkpoints/*.pth
-checkpoints/*/*.bin
+checkpoints/
 *.egg-info/
 results/
