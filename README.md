@@ -85,6 +85,7 @@ Our method is built upon stable diffusion and the network architecture is shown 
     ```
     sh test.sh
     ```
+These images under ``examples`` folder are obtained from [COCOEE](https://github.com/Fantasy-Studio/Paint-by-Example) dataset. 
 
 ### 4. Inference on your own data
 
