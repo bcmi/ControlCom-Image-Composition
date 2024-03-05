@@ -1,3 +1,4 @@
 checkpoints/*.pth
 checkpoints/*/*.bin
 *.egg-info/
+results/
