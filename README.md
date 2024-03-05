@@ -87,7 +87,7 @@ Our method is built upon stable diffusion and the network architecture is shown 
     ```
 These images under ``examples`` folder are obtained from [COCOEE](https://github.com/Fantasy-Studio/Paint-by-Example) dataset. 
 
-### 4. Inference on your own data
+### 4. Inference on your data
 
 - Please refer to the [examples](./examples/) folder for data preparation:
   - keep the same filenames for each pair of data. 
