@@ -7,7 +7,20 @@ This is the official repository for the following research paper:
 > Bo Zhang, Yuxuan Duan, Jun Lan, Yan Hong, Huijia Zhu, Weiqiang Wang, Li Niu<br>
 >
 
-## Task
+## Table of Contents
++ [Demo](#Demo)
++ [Task Definition](#Task-definition)
++ [Network Architecture](#Network-architecture)
++ [Code and Model](#Code-and-model)
++ [Experiments](#Experiments)
++ [Evaluation](#Evaluation)
+
+
+## Demo
+
+The online demo of image composition can be found [here](https://bcmi.sjtu.edu.cn/home/niuli/demo_image_composition/).
+
+## Task Definition
 
 
 In our controllable image composition model, we unify four tasks in one model using an 2-dim binary indicator vector, in which the first (*resp.*, second) dimension represents whether adjusting the foreground illumination (*resp.*, pose) to be compatible with background.  1 means making adjustment and 0 means remaining the same. Therefore, (0,0) corresponds to image blending, (1,0) corresponds to image harmonization, (0,1) corresponds to view synthesis, (1,1) corresponds to generative composition. 
@@ -30,7 +43,7 @@ Our method is built upon stable diffusion and the network architecture is shown 
   <img src='./figures/architecture.png'  width=90% />
 </p>
 
-## Code and model
+## Code and Model
 
 ### 1.  Dependencies
 
@@ -103,6 +116,10 @@ We show our results using four types of indicators.
 <p align='center'>  
   <img src='./figures/controllable_results.jpg'  width=60% />
 </p>
+
+## Evaluation
+
+The quantitative results and evaluation code can be found [here](https://github.com/bcmi/Awesome-Generative-Image-Composition?tab=readme-ov-file#leaderboard). 
 
 ## **Acknowledgements**
 This code borrows heavily from [Paint-By-Example](https://github.com/Fantasy-Studio/Paint-by-Example). We also appreciate the contributions of [Stable Diffusion](https://github.com/CompVis/stable-diffusion).
