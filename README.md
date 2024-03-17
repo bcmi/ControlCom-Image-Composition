@@ -5,7 +5,8 @@ This is the official repository for the following research paper:
 > **ControlCom: Controllable Image Composition using Diffusion Model**  [[arXiv]](https://arxiv.org/pdf/2308.10040.pdf)<br>
 >
 > Bo Zhang, Yuxuan Duan, Jun Lan, Yan Hong, Huijia Zhu, Weiqiang Wang, Li Niu<br>
->
+
+**Part of our ControlCom has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try ＼(^▽^)／** 
 
 ## Table of Contents
 + [Demo](#Demo)
@@ -107,7 +108,7 @@ These images under ``examples`` folder are obtained from [COCOEE](https://github
   - either the ``mask_bbox`` folder or the ``bbox`` folder is sufficient. 
   - ``foreground_mask`` folder is optional but recommended for better composite results.
 
-**Part of our ControlCom has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try!** 
+
 
 ## Experiments
 
