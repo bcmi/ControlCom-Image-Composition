@@ -57,7 +57,7 @@ Our method is built upon stable diffusion and the network architecture is shown 
     cd ControlCom-Image-Composition
     pip install -r requirements.txt
     cd src/taming-transformers
-    python setup.py install
+    pip install -e .
     ```
 ### 2.  Download Models
 
