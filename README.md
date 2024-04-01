@@ -5,9 +5,24 @@ This is the official repository for the following research paper:
 > **ControlCom: Controllable Image Composition using Diffusion Model**  [[arXiv]](https://arxiv.org/pdf/2308.10040.pdf)<br>
 >
 > Bo Zhang, Yuxuan Duan, Jun Lan, Yan Hong, Huijia Zhu, Weiqiang Wang, Li Niu<br>
->
 
-## Task
+**Part of our ControlCom has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try ＼(^▽^)／** 
+
+## Table of Contents
++ [Demo](#Demo)
++ [Task Definition](#Task-definition)
++ [Network Architecture](#Network-architecture)
++ [FOSCom Dataset](#FOSCom-Dataset)
++ [Code and Model](#Code-and-model)
++ [Experiments](#Experiments)
++ [Evaluation](#Evaluation)
+
+
+## Demo
+
+The online demo of image composition can be found [here](https://bcmi.sjtu.edu.cn/home/niuli/demo_image_composition/).
+
+## Task Definition
 
 
 In our controllable image composition model, we unify four tasks in one model using an 2-dim binary indicator vector, in which the first (*resp.*, second) dimension represents whether adjusting the foreground illumination (*resp.*, pose) to be compatible with background.  1 means making adjustment and 0 means remaining the same. Therefore, (0,0) corresponds to image blending, (1,0) corresponds to image harmonization, (0,1) corresponds to view synthesis, (1,1) corresponds to generative composition. 
@@ -30,7 +45,17 @@ Our method is built upon stable diffusion and the network architecture is shown 
   <img src='./figures/architecture.png'  width=90% />
 </p>
 
-## Code and model
+## FOSCom Dataset
+
+- **Download link**:
+  - [Google Drive](https://drive.google.com/file/d/10VNGXd2q7in-kvy5fr7yLDPovIf50rTN/view?usp=sharing)
+  - [Baidu Netdisk](https://pan.baidu.com/s/1FcCTWXbUy-O4ZfHN4n7PGQ?pwd=bcmi)
+- **Description**: 
+  - This dataset is built upon the existing [Foreground Object Search dataset](https://github.com/bcmi/Foreground-Object-Search-Dataset-FOSD).
+  - Each background image within this dataset comes with a manually annotated bounding box. These bounding boxes are suitable for placing one object from a specified category.
+  - The resultant dataset consists of 640 pairs of backgrounds and foregrounds. This dataset is utilized in our user study and qualitative comparison.
+
+## Code and Model
 
 ### 1.  Dependencies
 
@@ -43,7 +68,7 @@ Our method is built upon stable diffusion and the network architecture is shown 
     cd ControlCom-Image-Composition
     pip install -r requirements.txt
     cd src/taming-transformers
-    python setup.py install
+    pip install -e .
     ```
 ### 2.  Download Models
 
@@ -94,7 +119,7 @@ These images under ``examples`` folder are obtained from [COCOEE](https://github
   - either the ``mask_bbox`` folder or the ``bbox`` folder is sufficient. 
   - ``foreground_mask`` folder is optional but recommended for better composite results.
 
-**Part of our ControlCom has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try!** 
+
 
 ## Experiments
 
@@ -103,6 +128,10 @@ We show our results using four types of indicators.
 <p align='center'>  
   <img src='./figures/controllable_results.jpg'  width=60% />
 </p>
+
+## Evaluation
+
+The quantitative results and evaluation code can be found [here](https://github.com/bcmi/Awesome-Generative-Image-Composition?tab=readme-ov-file#leaderboard). 
 
 ## **Acknowledgements**
 This code borrows heavily from [Paint-By-Example](https://github.com/Fantasy-Studio/Paint-by-Example). We also appreciate the contributions of [Stable Diffusion](https://github.com/CompVis/stable-diffusion).
@@ -119,7 +148,7 @@ If you find this work or code is helpful in your research, please cite:
 ````
 
 ## Other Resources
-
++ We summarize the papers and codes of generative image composition: [Awesome-Generative-Image-Composition](https://github.com/bcmi/Awesome-Generative-Image-Composition)
 + We summarize the papers and codes of image composition from all aspects: [Awesome-Image-Composition](https://github.com/bcmi/Awesome-Image-Composition)
 + We summarize all possible evaluation metrics to evaluate the quality of composite images:  [Composite-Image-Evaluation](https://github.com/bcmi/Composite-Image-Evaluation)
-+ We write a comprehensive on image composition: [the 3rd edition](https://arxiv.org/abs/2106.14490)
++ We write a comprehensive survey on image composition: [the latest version](https://arxiv.org/pdf/2106.14490.pdf)
