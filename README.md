@@ -119,7 +119,9 @@ These images under ``examples`` folder are obtained from [COCOEE](https://github
   - either the ``mask_bbox`` folder or the ``bbox`` folder is sufficient. 
   - ``foreground_mask`` folder is optional but recommended for better composite results.
 
+### 5. Training code
 
+If you need training code, please send email to bo-zhang@sjtu.edu.cn. 
 
 ## Experiments
 
