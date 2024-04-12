@@ -121,7 +121,11 @@ These images under ``examples`` folder are obtained from [COCOEE](https://github
 
 ### 5. Training code
 
-If you need training code, please send email to bo-zhang@sjtu.edu.cn. 
+- **Download link**:
+  - [Google Drive](https://drive.google.com/file/d/1q28onmd4cEzY7pvLBuUEdGnhZ7LqqD0z/view?usp=sharing)
+  - [Baidu Netdisk](https://pan.baidu.com/s/1810soRtO9vxRpmJP51fNBA?pwd=zy1c)
+
+**Notes**: certain sensitive information has been removed since the model training was conducted within a company. To start training, you'll need to prepare your own training data and make necessary modifications to the code according to your requirements.
 
 ## Experiments
 
