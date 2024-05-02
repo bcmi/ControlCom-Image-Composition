@@ -25,10 +25,10 @@ The online demo of image composition can be found [here](https://bcmi.sjtu.edu.c
 ## Task Definition
 
 
-In our controllable image composition model, we unify four tasks in one model using an 2-dim binary indicator vector, in which the first (*resp.*, second) dimension represents whether adjusting the foreground illumination (*resp.*, pose) to be compatible with background.  1 means making adjustment and 0 means remaining the same. Therefore, (0,0) corresponds to image blending, (1,0) corresponds to image harmonization, (0,1) corresponds to view synthesis, (1,1) corresponds to generative composition. 
+**In our controllable image composition model, we unify four tasks in one model using an 2-dim binary indicator vector, in which the first (*resp.*, second) dimension represents whether adjusting the foreground illumination (*resp.*, pose) to be compatible with background.**  1 means making adjustment and 0 means remaining the same. Therefore, (0,0) corresponds to image blending, (1,0) corresponds to image harmonization, (0,1) corresponds to view synthesis, (1,1) corresponds to generative composition. 
 
 <p align='center'>  
-  <img src='./figures/task.png'  width=60% />
+  <img src='./figures/task.png'  width=70% />
 </p>
 
 Our method can selectively adjust partial foreground attributes. Previous methods may adjust the foreground color/pose unexpectedly and even unreasonably, even when the foreground illumination and pose are already compatible with the background. In the left part, the foreground pose is already compatible with background and previous methods make unnecessary adjustment. In the right part, the foreground illumination is already compatible with the background and previous methods adjust the foreground color in an undesirable manner. 
@@ -132,7 +132,7 @@ These images under ``examples`` folder are obtained from [COCOEE](https://github
 We show our results using four types of indicators. 
 
 <p align='center'>  
-  <img src='./figures/controllable_results.jpg'  width=60% />
+  <img src='./figures/controllable_results.jpg'  width=80% />
 </p>
 
 ## Evaluation
