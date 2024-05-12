@@ -31,11 +31,13 @@ The online demo of image composition can be found [here](https://bcmi.sjtu.edu.c
   <img src='./figures/task.png'  width=70% />
 </p>
 
-Our method can selectively adjust partial foreground attributes. Previous methods may adjust the foreground color/pose unexpectedly and even unreasonably, even when the foreground illumination and pose are already compatible with the background. In the left part, the foreground pose is already compatible with background and previous methods make unnecessary adjustment. In the right part, the foreground illumination is already compatible with the background and previous methods adjust the foreground color in an undesirable manner. 
+Our method can selectively adjust partial foreground attributes. **Previous methods may adjust the foreground color/pose unexpectedly and even unreasonably, even when the foreground illumination and pose are already compatible with the background.** In the left part, the foreground pose is already compatible with background and previous methods make unnecessary adjustment. In the right part, the foreground illumination is already compatible with the background and previous methods adjust the foreground color in an undesirable manner. 
 
 <p align='center'>  
   <img src='./figures/controllability_necessity.jpg'  width=90% />
 </p>
+
+**The (0,0), (1,0) versions without changing foreground pose are very robust and generally well-behaved, but some tiny details may be lost or altered. The (0,1), (1,1) versions changing foreground pose are less robust and may produce the results with distorted structures or noticeable artifacts.** For foreground pose variation, we recommend more robust [ObjectStitch](https://github.com/bcmi/ObjectStitch-Image-Composition).
 
 ## Network Architecture
 
