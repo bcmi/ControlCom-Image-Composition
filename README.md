@@ -52,7 +52,7 @@ Our method is built upon stable diffusion and the network architecture is shown 
 ## FOSCom Dataset
 
 - **Download link**:
-  - [Google Drive](https://drive.google.com/file/d/10VNGXd2q7in-kvy5fr7yLDPovIf50rTN/view?usp=sharing)
+  - [Dropbox](https://www.dropbox.com/scl/fi/c3ynuw7sya1r6f2khm828/FOSCom.zip?rlkey=xif0zh9ug7inrpw593voagtit&st=v2hg4pt1&dl=0)
   - [Baidu Netdisk](https://pan.baidu.com/s/1FcCTWXbUy-O4ZfHN4n7PGQ?pwd=bcmi)
 - **Description**: 
   - This dataset is built upon the existing [Foreground Object Search dataset](https://github.com/bcmi/Foreground-Object-Search-Dataset-FOSD).
@@ -126,7 +126,7 @@ These images under ``examples`` folder are obtained from [COCOEE](https://github
 ### 5. Training code
 
 - **Download link**:
-  - [Google Drive](https://drive.google.com/file/d/1q28onmd4cEzY7pvLBuUEdGnhZ7LqqD0z/view?usp=sharing)
+  - [Dropbox](https://www.dropbox.com/scl/fi/7xct03btipclhl8a8z135/ControlCom_train.zip?rlkey=hi1z5eh3b9kbtc4g4jrbjcq3q&st=nmuynh0z&dl=0)
   - [Baidu Netdisk](https://pan.baidu.com/s/1810soRtO9vxRpmJP51fNBA?pwd=zy1c)
 
 **Notes**: certain sensitive information has been removed since the model training was conducted within a company. To start training, you'll need to prepare your own training data and make necessary modifications to the code according to your requirements.
