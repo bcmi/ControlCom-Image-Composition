@@ -59,6 +59,8 @@ Our method is built upon stable diffusion and the network architecture is shown 
   - Each background image within this dataset comes with a manually annotated bounding box. These bounding boxes are suitable for placing one object from a specified category.
   - The resultant dataset consists of 640 pairs of backgrounds and foregrounds. This dataset is utilized in our user study and qualitative comparison.
 
+**We have extended FOSCom dataset to [MureCom](https://github.com/bcmi/DreamCom-Image-Composition/tree/main?tab=readme-ov-file#our-murecom-dataset) which has multiple images for one foreground object.**
+
 ## Code and Model
 
 ### 1.  Dependencies
