@@ -6,7 +6,6 @@ This is the official repository for the following research paper:
 >
 > Bo Zhang, Yuxuan Duan, Jun Lan, Yan Hong, Huijia Zhu, Weiqiang Wang, Li Niu<br>
 
-**Part of our ControlCom has been integrated into our image composition toolbox libcom https://github.com/bcmi/libcom. Welcome to visit and try ＼(^▽^)／** 
 
 ## Table of Contents
 + [Demo](#Demo)
@@ -18,9 +17,6 @@ This is the official repository for the following research paper:
 + [Evaluation](#Evaluation)
 
 
-## Demo
-
-The online demo of image composition can be found [here](https://bcmi.sjtu.edu.cn/home/niuli/demo_image_composition/).
 
 ## Task Definition
 
