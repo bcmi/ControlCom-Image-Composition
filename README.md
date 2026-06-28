@@ -37,7 +37,7 @@ Our method can selectively adjust partial foreground attributes. **Previous meth
   <img src='./figures/controllability_necessity.jpg'  width=90% />
 </p>
 
-**The (0,0), (1,0) versions without changing foreground pose are very robust and generally well-behaved, but some tiny details may be lost or altered. The (0,1), (1,1) versions changing foreground pose are less robust and may produce the results with distorted structures or noticeable artifacts.** For foreground pose variation, we recommend more robust [ObjectStitch](https://github.com/bcmi/ObjectStitch-Image-Composition) and [MureObjectStitch](https://github.com/bcmi/MureObjectStitch-Image-Composition).
+**The (0,0), (1,0) versions without changing foreground pose are very robust and generally well-behaved, but some tiny details may be lost or altered. The (0,1), (1,1) versions changing foreground pose are less robust and may produce the results with distorted structures or noticeable artifacts.** For foreground pose variation, we recommend [OSInsert](https://github.com/bcmi/OSInsert-Image-Composition), which can achieve both high-fidelity (keep the appearance details of reference image) and high-authenticity (adjust foreground pose/viewpoint according to the background).
 
 **Note that in the provided foreground image, the foreground object's length and width should fully extend to the edges of the image (see our example), otherwise the performance would be severely affected.**
 
